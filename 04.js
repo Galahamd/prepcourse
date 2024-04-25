@@ -13,7 +13,17 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-
+  let copiaNum = num;
+  let simetrico = 0;
+  while (copiaNum > 0) {
+    simetrico = simetrico*10 + (copiaNum%10);
+    copiaNum = (copiaNum - (copiaNum%10)) / 10;
+  };
+  if (simetrico === num) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // No modifiques nada debajo de esta linea //
